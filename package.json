@@ -1,0 +1,17 @@
+{
+  "name": "cjs-named-exports-loader",
+  "version": "0.0.0",
+  "description": "Simple loader example for creating a loader to support named exports for CJS modules in Node.js",
+  "main": "cjs-named-exports-loader.mjs",
+  "author": "Guy Bedford",
+  "license": "MIT",
+  "dependencies": {
+    "cjs-module-lexer": "^0.2.11"
+  },
+  "devDependencies": {
+    "react": "^16.13.1"
+  },
+  "scripts": {
+    "test": "node --loader ./cjs-named-exports-loader.mjs test.mjs"
+  }
+}
