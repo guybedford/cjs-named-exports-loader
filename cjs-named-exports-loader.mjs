@@ -63,7 +63,7 @@ export async function getSource (url, context, defaultGetSource) {
   let source = `import exports from '${url}?cjsoriginal';\n`;
   if (exports.size)
     source += `export const `;
-  source += [...exports].map(expt => `${expt} = exports.${expt}`).join(', ') + ';\n';
+  source += [...exports].filter(expt => expt !== 'default').map(expt => `${expt} = exports.${expt}`).join(', ') + ';\n';
   source += `export default exports;\n`;
   return { source };
 }
